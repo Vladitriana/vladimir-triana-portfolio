@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vladimir Triana | Portafolio Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono:wght@400;500&display=swap');
+        
+        :root {
+            --bg-dark: #020617;
+            --accent-primary: #4f46e5;
+            --accent-secondary: #06b6d4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #818cf8, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .skill-tag {
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid rgba(79, 70, 229, 0.2);
+            color: #a5b4fc;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-secondary);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-secondary);
+        }
+
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-anim { animation: subtle-float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="selection:bg-cyan-500/30">
+
+    <!-- Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-5%] w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-[5%] right-[-5%] w-[30rem] h-[30rem] bg-cyan-600/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-black text-2xl tracking-tighter">
+                V<span class="text-indigo-500">T</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-slate-400 uppercase tracking-widest">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#experiencia" class="nav-link">Experiencia</a>
+                <a href="#contacto" class="nav-link text-white">Contacto</a>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com/vladitriana" target="_blank" class="p-2 hover:text-cyan-400 transition" title="GitHub"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/vladimirtriana" target="_blank" class="p-2 hover:text-cyan-400 transition" title="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="inicio" class="max-w-6xl mx-auto px-6 pt-40 pb-24 text-center">
+        <span class="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-4 block font-bold">Business Solutions & Data Lead</span>
+        <h1 class="text-5xl md:text-8xl font-extrabold mb-8 leading-[1.1] tracking-tight">
+            VLADIMIR <span class="gradient-text tracking-normal">TRIANA</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-10">
+            Administrador de Empresas con un enfoque <strong class="text-white">Full-Stack en Operaciones</strong>. Especialista en optimizar rentabilidad mediante la automatización de procesos y el análisis estratégico de datos financieros.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center mb-12">
+            <span class="skill-tag px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Power BI Expert</span>
+            <span class="skill-tag px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Python Automation</span>
+            <span class="skill-tag px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Business Admin</span>
+            <span class="skill-tag px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">Low-Code Dev</span>
+        </div>
+        <a href="#proyectos" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-2xl font-bold transition group">
+            Ver Portafolio <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+        </a>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 space-y-32 pb-32">
+
+        <!-- PROJECTS SECTION -->
+        <section id="proyectos">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold italic uppercase tracking-tighter">Proyectos Destacados</h2>
+                <div class="h-px flex-grow bg-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- SIC PROJECT -->
+                <div class="lg:col-span-2 glass-panel p-8 md:p-12 rounded-[2.5rem] border-l-4 border-l-cyan-500 group relative overflow-hidden project-card">
+                    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-cyan-600/5 rounded-full blur-3xl"></div>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center border border-cyan-500/20">
+                            <i class="fa-solid fa-chart-pie text-cyan-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Sistema de Gestión de Cartera SIC</h3>
+                    </div>
+                    
+                    <p class="text-slate-300 text-lg mb-8 leading-relaxed">
+                        Arquitectura híbrida para la administración masiva de cartera. Procesamiento con <strong class="text-white">Python</strong> y visualización estratégica en <strong class="text-white">Power BI</strong> con seguridad <strong class="text-cyan-400">RLS</strong>.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-[10px] uppercase">
+                        <div class="p-4 bg-slate-800/50 rounded-2xl border border-white/5 text-center">
+                            <span class="block text-cyan-400 font-bold text-lg mb-1">Python</span>
+                            ETL / Automatización
+                        </div>
+                        <div class="p-4 bg-slate-800/50 rounded-2xl border border-white/5 text-center">
+                            <span class="block text-cyan-400 font-bold text-lg mb-1">Power BI</span>
+                            Business Intelligence
+                        </div>
+                        <div class="p-4 bg-slate-800/50 rounded-2xl border border-white/5 text-center">
+                            <span class="block text-cyan-400 font-bold text-lg mb-1">SQL</span>
+                            Gestión de Datos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LIBRANZA DIGITAL -->
+                <div class="glass-panel p-8 rounded-[2.5rem] border-t-4 border-t-indigo-500 flex flex-col justify-between project-card">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center border border-indigo-500/20">
+                                <i class="fa-solid fa-fingerprint text-indigo-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Libranza Digital</h3>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                            Implementación de firma electrónica y digitalización de punta a punta, optimizando el ciclo de crédito en un <strong class="text-white">60%</strong>.
+                        </p>
+                    </div>
+                    <div class="text-center py-6 bg-indigo-500/10 rounded-2xl border border-indigo-500/20">
+                        <span class="block text-3xl font-black text-indigo-400 mb-1">-60%</span>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Eficiencia Operativa</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK / SKILLS -->
+        <section>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4 italic uppercase tracking-tighter">Arsenal Técnico</h2>
+                <p class="text-slate-500">Tecnologías aplicadas a la solución de problemas de negocio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-panel p-6 rounded-2xl project-card border-t-2 border-cyan-500">
+                    <h5 class="font-bold text-white mb-4 flex items-center gap-2 italic">Código</h5>
+                    <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                        <li>Python (Pandas / Automation)</li>
+                        <li>Google Apps Script</li>
+                        <li>VBA / Excel Macros</li>
+                        <li>JavaScript / HTML / CSS</li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl project-card border-t-2 border-indigo-500">
+                    <h5 class="font-bold text-white mb-4 flex items-center gap-2 italic">Analytics</h5>
+                    <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                        <li>Power BI (DAX / RLS)</li>
+                        <li>SQL Server</li>
+                        <li>Modelado de Datos</li>
+                        <li>KPIs Financieros</li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl project-card border-t-2 border-emerald-500">
+                    <h5 class="font-bold text-white mb-4 flex items-center gap-2 italic">Negocio</h5>
+                    <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                        <li>Admin. de Cartera</li>
+                        <li>Proyecciones Financieras</li>
+                        <li>Eficiencia de Costos</li>
+                        <li>Gestión de Convenios</li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl project-card border-t-2 border-purple-500">
+                    <h5 class="font-bold text-white mb-4 flex items-center gap-2 italic">Apps</h5>
+                    <ul class="space-y-2 text-xs text-slate-400 font-mono">
+                        <li>AppSheet Development</li>
+                        <li>Simuladores de Crédito</li>
+                        <li>Sistemas de PQRS</li>
+                        <li>Libranza Digital</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experiencia">
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold italic uppercase tracking-tighter">Trayectoria Profesional</h2>
+                <div class="h-px flex-grow bg-slate-800"></div>
+            </div>
+
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-indigo-500/30">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-indigo-500 rounded-full border-2 border-slate-900 shadow-[0_0_15px_rgba(79,70,229,0.5)]"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white uppercase tracking-tight">Coordinador Administrativo y Financiero</h3>
+                        <span class="text-slate-500 font-mono text-xs">2021 — Actualidad</span>
+                    </div>
+                    <p class="text-cyan-400 font-bold mb-4 uppercase text-xs tracking-widest">Cooplidersocial | Cali</p>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-4xl">
+                        Lidero la transformación digital financiera nacional. Creador de la solución SIC y líder del proyecto Libranza Digital, optimizando la operación en 8 sedes mediante herramientas personalizadas.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-slate-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-700 rounded-full border-2 border-slate-900"></div>
+                    <div class="flex flex-col md:flex-row justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white uppercase tracking-tight">Coordinador Administrativo</h3>
+                        <span class="text-slate-500 font-mono text-xs">2017 — 2021</span>
+                    </div>
+                    <p class="text-slate-400 font-bold mb-4 uppercase text-xs tracking-widest">Montrial S.A.S | Bogotá</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-4xl">
+                        Estructuré modelos financieros para control de costos y administré carteras logísticas masivas para productos de consumo masivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section>
+            <div class="flex items-center gap-4 mb-12">
+                <h2 class="text-3xl font-bold italic uppercase tracking-tighter">Idiomas</h2>
+                <div class="h-px flex-grow bg-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-panel p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center border border-indigo-500/20">
+                            <i class="fa-solid fa-language text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Español</h4>
+                            <p class="text-xs text-slate-500 font-mono uppercase">Nativo</p>
+                        </div>
+                    </div>
+                    <span class="text-indigo-400 font-black text-sm uppercase font-mono">100%</span>
+                </div>
+                <div class="glass-panel p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center border border-cyan-500/20">
+                            <i class="fa-solid fa-globe text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Inglés</h4>
+                            <p class="text-xs text-slate-500 font-mono uppercase">B1 - Intermedio</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-1">
+                        <div class="w-4 h-1 bg-cyan-400 rounded-full"></div>
+                        <div class="w-4 h-1 bg-cyan-400 rounded-full"></div>
+                        <div class="w-4 h-1 bg-slate-700 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION (NEW) -->
+        <section id="contacto" class="pb-20">
+            <div class="glass-panel p-12 rounded-[3rem] border-indigo-500/20 relative overflow-hidden text-center">
+                <div class="absolute top-0 right-0 p-10 opacity-5">
+                    <i class="fa-solid fa-paper-plane text-9xl"></i>
+                </div>
+                <h2 class="text-4xl font-extrabold mb-6 italic">¿Tienes un reto para mí?</h2>
+                <p class="text-slate-400 mb-10 max-w-xl mx-auto leading-relaxed">
+                    Estoy abierto a discutir cómo mis habilidades en automatización y análisis pueden transformar tu eficiencia operativa.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="mailto:vladi.triana@yahoo.com.co" class="bg-indigo-600 hover:bg-indigo-500 text-white px-10 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-indigo-500/20 w-full sm:w-auto">
+                        Enviar Correo
+                    </a>
+                    <a href="https://www.linkedin.com/in/vladimirtriana" target="_blank" class="border border-white/10 hover:bg-white/5 text-white px-10 py-4 rounded-2xl font-bold transition-all w-full sm:w-auto">
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-16 bg-slate-950/80 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-xs font-mono tracking-widest uppercase mb-6">
+            Vladimir Triana • Business Solutions Lead
+        </p>
+        <p class="text-[10px] text-slate-700 font-mono uppercase">Optimizado para la web • 2026</p>
+    </footer>
+
+</body>
+</html>
